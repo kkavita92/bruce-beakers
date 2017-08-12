@@ -12,4 +12,8 @@ describe("Beaker", function() {
     expect(beaker.maximumCapacity).toEqual(3);
   });
 
+  it("initialises with current capacity of zero", function() {
+    expect(beaker.currentCapacity).toEqual(0);
+  });
+
 });

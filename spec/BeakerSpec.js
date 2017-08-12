@@ -34,6 +34,11 @@ describe("Beaker", function() {
       beaker.empty();
       expect(beaker.currentCapacity).toEqual(0);
     });
+
+    it("should not allow emptied beaker to be emptied", function() {
+      beaker.empty();
+      expect(function(){ beaker.empty(); }).toThrow(new Error('Beaker is already empty'));
+    });
   });
 
 

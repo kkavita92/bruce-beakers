@@ -23,6 +23,11 @@ describe("Beaker", function() {
       beaker.fillup();
       expect(beaker.currentCapacity).toEqual(3);
     });
+
+    it("should not allow full beaker to be filled", function() {
+      beaker.fillup();
+      expect(function(){ beaker.fillup(); }).toThrow(new Error('Beaker is already full'));
+    });
   });
 
   describe("#empty", function() {

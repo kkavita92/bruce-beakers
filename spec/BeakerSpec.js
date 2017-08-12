@@ -25,5 +25,16 @@ describe("Beaker", function() {
     });
   });
 
+  describe("#empty", function() {
+    beforeEach(function() {
+      beaker.fillup();
+    });
+
+    it("can empty beaker completely", function() {
+      beaker.empty();
+      expect(beaker.currentCapacity).toEqual(0);
+    });
+  });
+
 
 });

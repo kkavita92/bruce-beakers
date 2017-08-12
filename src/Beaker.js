@@ -8,3 +8,7 @@ var Beaker = function(capacity) {
 Beaker.prototype.fillup = function() {
   this.currentCapacity = this.maximumCapacity;
 };
+
+Beaker.prototype.empty = function() {
+  this.currentCapacity = 0;
+};

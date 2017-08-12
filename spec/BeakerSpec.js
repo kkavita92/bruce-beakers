@@ -18,32 +18,4 @@ describe("Beaker", function() {
     });
   });
 
-  describe("#fillup", function() {
-    it("can fill beaker to maximum capacity", function() {
-      beaker.fillup();
-      expect(beaker.currentCapacity).toEqual(3);
-    });
-
-    it("should not allow full beaker to be filled", function() {
-      beaker.fillup();
-      expect(function(){ beaker.fillup(); }).toThrow(new Error('Beaker is already full'));
-    });
-  });
-
-  describe("#empty", function() {
-    beforeEach(function() {
-      beaker.fillup();
-    });
-
-    it("can empty beaker completely", function() {
-      beaker.empty();
-      expect(beaker.currentCapacity).toEqual(0);
-    });
-
-    it("should not allow emptied beaker to be emptied", function() {
-      beaker.empty();
-      expect(function(){ beaker.empty(); }).toThrow(new Error('Beaker is already empty'));
-    });
-  });
-
 });

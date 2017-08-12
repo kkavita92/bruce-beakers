@@ -5,6 +5,16 @@ var Puzzle = function() {
   this.fiveLitreBeaker = new Beaker(5);
 };
 
+Puzzle.prototype.fillup = function(beaker) {
+  if (beaker.isFull()) throw new Error('Beaker is already full');
+  beaker.currentCapacity = beaker.maximumCapacity;
+};
+
+Puzzle.prototype.empty = function(beaker) {
+  if (beaker.isEmpty()) throw new Error('Beaker is already empty');
+  beaker.currentCapacity = 0;
+};
+
 Puzzle.prototype.pour = function(beakerFrom, beakerTo) {
   var water = beakerFrom.currentCapacity;
   var capacity = beakerTo.maximumCapacity - beakerTo.currentCapacity;

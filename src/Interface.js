@@ -5,7 +5,7 @@ $(document).ready(function() {
   var threeLitreBeaker = puzzle.threeLitreBeaker;
   updateThreeLitreBeakerCapacity();
   updateFiveLitreBeakerCapacity();
-  startTimer(5);
+  startTimer(2);
 
   $('#more-info').on('click', function() {
     $('#infopopup').toggle();

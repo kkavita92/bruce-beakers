@@ -17,6 +17,7 @@ function startTimer(duration) {
 }
 
 function loseGame() {
+  $(".overlay").css("width", "100%");
   $('#losepopup').toggle();
   $(this).addClass('open');
   $('#time').empty();

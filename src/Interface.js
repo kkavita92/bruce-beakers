@@ -3,31 +3,52 @@ $(document).ready(function() {
   var puzzle = new Puzzle();
   var fiveLitreBeaker = puzzle.fiveLitreBeaker;
   var threeLitreBeaker = puzzle.threeLitreBeaker;
+  updateThreeLitreBeakerCapacity();
+  updateFiveLitreBeakerCapacity();
 
-  $('#fivelitrebeaker').text(fiveLitreBeaker.currentCapacity);
-  $('#threelitrebeaker').text(threeLitreBeaker.currentCapacity);
+  function updateThreeLitreBeakerCapacity() {
+    $('#threelitrebeaker').text(threeLitreBeaker.currentCapacity);
+  }
+
+  function updateFiveLitreBeakerCapacity() {
+    $('#fivelitrebeaker').text(fiveLitreBeaker.currentCapacity);
+  }
 
   $('#fillfive').click(function() {
     puzzle.fillup(fiveLitreBeaker);
-    $('#fivelitrebeaker').text(fiveLitreBeaker.currentCapacity);
+    updateFiveLitreBeakerCapacity();
     return false;
   });
 
   $('#fillthree').click(function() {
     puzzle.fillup(threeLitreBeaker);
-    $('#threelitrebeaker').text(threeLitreBeaker.currentCapacity);
+    updateThreeLitreBeakerCapacity();
     return false;
   });
 
   $('#emptyfive').click(function() {
     puzzle.empty(fiveLitreBeaker);
-    $('#fivelitrebeaker').text(fiveLitreBeaker.currentCapacity);
+    updateFiveLitreBeakerCapacity();
     return false;
   });
 
   $('#emptythree').click(function() {
     puzzle.empty(threeLitreBeaker);
-    $('#threelitrebeaker').text(threeLitreBeaker.currentCapacity);
+    updateThreeLitreBeakerCapacity();
+    return false;
+  });
+
+  $('#pourfromfive').click(function() {
+    puzzle.pour(fiveLitreBeaker, threeLitreBeaker);
+    updateThreeLitreBeakerCapacity();
+    updateFiveLitreBeakerCapacity();
+    return false;
+  });
+
+  $('#pourfromthree').click(function() {
+    puzzle.pour(threeLitreBeaker, fiveLitreBeaker);
+    updateThreeLitreBeakerCapacity();
+    updateFiveLitreBeakerCapacity();
     return false;
   });
 

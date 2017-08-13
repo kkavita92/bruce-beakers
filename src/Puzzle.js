@@ -19,11 +19,11 @@ Puzzle.prototype.pour = function(beakerFrom, beakerTo) {
   var water = beakerFrom.currentCapacity;
   var capacity = beakerTo.maximumCapacity - beakerTo.currentCapacity;
   if(water > capacity) {
-    beakerTo.fillup();
+    this.fillup(beakerTo);
     beakerFrom.currentCapacity -= capacity;
   } else {
     beakerTo.currentCapacity += water;
-    beakerFrom.empty();
+    this.empty(beakerFrom);
   }
 };
 

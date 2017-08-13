@@ -6,6 +6,7 @@
 ```
 1. Clone repo
 2. Open index.html in your browser
+3. Click on information button for instructions
 ```
 
 ## Technologies Used
@@ -31,7 +32,7 @@ I wanted the Beaker object to only contain the properties of the beaker such as 
 
 I also followed a TDD-approach in completing the backend (shown below), using unit tests to guide what I wanted each object to do. If you'd like to run my tests directly, open ```SpecRunner.html``` in your browser.
 
-[insert Jasmine screenshot]
+![Passing Tests!](public/images/unit_tests.png)
 
 I spent considerable time on the frontend, mainly as I wanted the application to be highly interactive. In particular, I wanted an animated glass which would have its content changing according to its current volume as I thought it would enable the user to visualise what they were doing more clearly. A countdown timer and pop-ups which would automatically stop the game when the player had solved the puzzle or when time had run out were also other features I was keen on. I was able to achieve these with a combination of JQuery and CSS.
 

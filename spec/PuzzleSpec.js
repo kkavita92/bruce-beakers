@@ -49,4 +49,34 @@ describe("Puzzle", function() {
     });
   });
 
+  describe("#pour", function() {
+    beforeEach(function() {
+      puzzle.fillup(threeLitreBeaker);
+      puzzle.fillup(fiveLitreBeaker);
+    });
+    it("allows pouring when amount of space greater than water", function() {
+      puzzle.empty(fiveLitreBeaker);
+      puzzle.pour(threeLitreBeaker, fiveLitreBeaker);
+      expect(threeLitreBeaker.currentCapacity).toEqual(0);
+      expect(fiveLitreBeaker.currentCapacity).toEqual(3);
+    });
+
+    it("allows pouring when amount of water greater than space", function() {
+      puzzle.empty(threeLitreBeaker);
+      puzzle.pour(fiveLitreBeaker, threeLitreBeaker);
+      expect(threeLitreBeaker.currentCapacity).toEqual(3);
+      expect(fiveLitreBeaker.currentCapacity).toEqual(2);
+    });
+
+    it("should not allow empty beaker to be poured from", function() {
+      puzzle.empty(threeLitreBeaker);
+      puzzle.empty(fiveLitreBeaker);
+      expect(function(){ puzzle.pour(threeLitreBeaker, fiveLitreBeaker); }).toThrow(new Error('Beaker is already empty'));
+    });
+
+    it("should not allow full beaker to be poured into", function() {
+      expect(function(){ puzzle.pour(threeLitreBeaker, fiveLitreBeaker); }).toThrow(new Error('Beaker is already full'));
+    });
+  });
+
 });

@@ -7,6 +7,14 @@ $(document).ready(function() {
   updateFiveLitreBeakerCapacity();
   startTimer(300);
 
+  function createOverlay() {
+    $(".overlay").css("width", "100%");
+  }
+
+  function removeOverlay() {
+    $(".overlay").css("width", "0%");
+  }
+
   function updateFiveLitreBeaker() {
     var percentageFilled = fiveLitreBeaker.currentCapacity * 20;
     $('.fivelitrewater').animate({height: percentageFilled + '%'}, 1000)
@@ -33,17 +41,20 @@ $(document).ready(function() {
 
   function endgame() {
     $("#timer").empty();
+    createOverlay();
     $('#winpopup').toggle();
     $(this).addClass('open');
   }
 
   $('#more-info').on('click', function() {
     $('#infopopup').toggle();
+    createOverlay();
     $(this).addClass('open');
   });
 
   $('#close').on('click', function() {
     $('#infopopup').toggle();
+    removeOverlay();
     $(this).removeClass('open');
   });
 

@@ -5,6 +5,7 @@ $(document).ready(function() {
   var threeLitreBeaker = puzzle.threeLitreBeaker;
   updateThreeLitreBeakerCapacity();
   updateFiveLitreBeakerCapacity();
+  startTimer(3);
 
   function updateFiveLitreBeaker() {
     var percentageFilled = fiveLitreBeaker.currentCapacity * 20;

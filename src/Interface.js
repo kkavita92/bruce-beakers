@@ -1,5 +1,15 @@
 $(document).ready(function() {
 
+function updateFiveLitreBeaker() {
+  var percentageFilled = fiveLitreBeaker.currentCapacity * 20;
+  $('.fivelitrewater').animate({height: percentageFilled + '%'}, 1000)
+}
+
+function updateThreeLitreBeaker() {
+  var percentageFilled = threeLitreBeaker.currentCapacity * 33.33;
+  $('.threelitrewater').animate({height: percentageFilled + '%'}, 1000)
+}
+
   var puzzle = new Puzzle();
   var fiveLitreBeaker = puzzle.fiveLitreBeaker;
   var threeLitreBeaker = puzzle.threeLitreBeaker;
@@ -27,6 +37,7 @@ $(document).ready(function() {
   $('#fillfive').click(function() {
     puzzle.fillup(fiveLitreBeaker);
     updateFiveLitreBeakerCapacity();
+    updateFiveLitreBeaker();
     checkGame();
     return false;
   });
@@ -34,12 +45,14 @@ $(document).ready(function() {
   $('#fillthree').click(function() {
     puzzle.fillup(threeLitreBeaker);
     updateThreeLitreBeakerCapacity();
+    updateThreeLitreBeaker();
     checkGame();
     return false;
   });
 
   $('#emptyfive').click(function() {
     puzzle.empty(fiveLitreBeaker);
+    updateFiveLitreBeaker();
     updateFiveLitreBeakerCapacity();
     checkGame();
     return false;
@@ -48,6 +61,7 @@ $(document).ready(function() {
   $('#emptythree').click(function() {
     puzzle.empty(threeLitreBeaker);
     updateThreeLitreBeakerCapacity();
+    updateThreeLitreBeaker();
     checkGame();
     return false;
   });
@@ -56,6 +70,8 @@ $(document).ready(function() {
     puzzle.pour(fiveLitreBeaker, threeLitreBeaker);
     updateThreeLitreBeakerCapacity();
     updateFiveLitreBeakerCapacity();
+    updateFiveLitreBeaker();
+    updateThreeLitreBeaker();
     checkGame();
     return false;
   });
@@ -64,6 +80,8 @@ $(document).ready(function() {
     puzzle.pour(threeLitreBeaker, fiveLitreBeaker);
     updateThreeLitreBeakerCapacity();
     updateFiveLitreBeakerCapacity();
+    updateFiveLitreBeaker();
+    updateThreeLitreBeaker();
     checkGame();
     return false;
   });

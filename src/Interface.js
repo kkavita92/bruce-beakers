@@ -5,46 +5,7 @@ $(document).ready(function() {
   var threeLitreBeaker = puzzle.threeLitreBeaker;
   updateThreeLitreBeakerCapacity();
   updateFiveLitreBeakerCapacity();
-  startTimer(300);
-
-  function createOverlay() {
-    $(".overlay").css("width", "100%");
-  }
-
-  function removeOverlay() {
-    $(".overlay").css("width", "0%");
-  }
-
-  function updateFiveLitreBeaker() {
-    var percentageFilled = fiveLitreBeaker.currentCapacity * 20;
-    $('.fivelitrewater').animate({height: percentageFilled + '%'}, 1000)
-  }
-
-  function updateThreeLitreBeaker() {
-    var percentageFilled = threeLitreBeaker.currentCapacity * 33.33;
-    $('.threelitrewater').animate({height: percentageFilled + '%'}, 1000)
-  }
-
-  function updateThreeLitreBeakerCapacity() {
-    $('#threelitrebeaker').text(`${threeLitreBeaker.currentCapacity}/3`);
-  }
-
-  function updateFiveLitreBeakerCapacity() {
-    $('#fivelitrebeaker').text(`${fiveLitreBeaker.currentCapacity}/5`);
-  }
-
-  function checkGame() {
-    if(puzzle.gameOver()) {
-      endgame();
-    }
-  }
-
-  function endgame() {
-    $("#timer").empty();
-    createOverlay();
-    $('#winpopup').toggle();
-    $(this).addClass('open');
-  }
+  startTimer(5);
 
   $('#more-info').on('click', function() {
     $('#infopopup').toggle();
@@ -58,8 +19,8 @@ $(document).ready(function() {
     $(this).removeClass('open');
   });
 
-  $('#restart').on('click', function() {
-    location.reload();
+  $('.restart').on('click', function() {
+    location.reload(true);
   });
 
   $('#fillfive').click(function() {
@@ -114,5 +75,43 @@ $(document).ready(function() {
     return false;
   });
 
+  function createOverlay() {
+    $(".overlay").css("width", "100%");
+  }
+
+  function removeOverlay() {
+    $(".overlay").css("width", "0%");
+  }
+
+  function updateFiveLitreBeaker() {
+    var percentageFilled = fiveLitreBeaker.currentCapacity * 20;
+    $('.fivelitrewater').animate({height: percentageFilled + '%'}, 1000)
+  }
+
+  function updateThreeLitreBeaker() {
+    var percentageFilled = threeLitreBeaker.currentCapacity * 33.33;
+    $('.threelitrewater').animate({height: percentageFilled + '%'}, 1000)
+  }
+
+  function updateThreeLitreBeakerCapacity() {
+    $('#threelitrebeaker').text(`${threeLitreBeaker.currentCapacity}/3`);
+  }
+
+  function updateFiveLitreBeakerCapacity() {
+    $('#fivelitrebeaker').text(`${fiveLitreBeaker.currentCapacity}/5`);
+  }
+
+  function checkGame() {
+    if(puzzle.gameOver()) {
+      endgame();
+    }
+  }
+
+  function endgame() {
+    $("#timer").empty();
+    createOverlay();
+    $('#winpopup').toggle();
+    $(this).addClass('open');
+  }
 
 });

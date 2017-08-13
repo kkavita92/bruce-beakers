@@ -15,7 +15,9 @@
 * JQuery
 
 ## Screenshots
-[insert screenshot here]
+![Puzzle Instructions](public/images/screenshot_three.png)
+![Animated Beaker](public/images/screenshot_two.png)
+![Game Won!](public/images/screenshot_four.png)
 
 ## My Approach
 

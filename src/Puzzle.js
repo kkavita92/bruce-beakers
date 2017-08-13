@@ -16,13 +16,13 @@ Puzzle.prototype.empty = function(beaker) {
 };
 
 Puzzle.prototype.pour = function(beakerFrom, beakerTo) {
-  var water = beakerFrom.currentCapacity;
-  var capacity = beakerTo.maximumCapacity - beakerTo.currentCapacity;
-  if(water > capacity) {
+  var waterAvailable = beakerFrom.currentCapacity;
+  var capacityAvailable = beakerTo.maximumCapacity - beakerTo.currentCapacity;
+  if (waterAvailable > capacityAvailable) {
     this.fillup(beakerTo);
-    beakerFrom.currentCapacity -= capacity;
+    beakerFrom.currentCapacity -= capacityAvailable;
   } else {
-    beakerTo.currentCapacity += water;
+    beakerTo.currentCapacity += waterAvailable;
     this.empty(beakerFrom);
   }
 };

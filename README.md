@@ -30,7 +30,7 @@ Before beginning, I sketched out the JavaScript objects the programme would like
 
 ![Planning Sketch](public/images/planning.JPG)
 
-I wanted the ```Beaker``` object to only contain the properties of the beaker such as maximum and current capacity while it was decided that the ```Puzzle``` object would control the actual game methods such as ```fillup```, ```empty``` and ```pour```.
+I wanted the ```Beaker``` object to only contain the properties of the beaker(maximum and current capacity) while it was decided that the ```Puzzle``` object would control the actual game methods such as ```fillup```, ```empty``` and ```pour```.
 
 I also followed a TDD-approach in completing the backend (shown below), using unit tests to guide what I wanted each object to do. If you'd like to run my tests directly, open ```SpecRunner.html``` in your browser.
 
@@ -45,7 +45,7 @@ Regretfully, I ran out of time to include feature tests for the front end so I h
 
 ## Reflections
 
-This was an interesting challenge, particularly as I got a chance to really get my hands dirty with CSS/JQuery. This was since the backend was fairly straightforward, and I was able to devote a lot more time to the frontend. It was an interesting change to what I normally do and I enjoyed fiddling with things a lot more than I thought and probably spent WAY too much time on styling my buttons. On the positive side, I learnt a lot more about styling such as 'animating' with CSS, creating pop-ups with pure CSS/HTML and making a countdown timer.
+This was an interesting challenge, particularly as I got a chance to really get my hands dirty with CSS/JQuery. It was an interesting change to what I normally do and I enjoyed fiddling with things a lot more than I thought and probably spent WAY too much time on styling my buttons. On the positive side, I learnt a lot more about styling such as 'animating' with CSS, creating pop-ups with pure CSS/HTML and making a countdown timer.
 
 As for the negatives, lack of timing was an issue and put constraints on things I wanted to do. I had to scrap the initial goal of deploying it with Node.js on Heroku as configuring NPM and Node on my old Windows laptop (having returned my Mac to Makers) and setting up the project would have taken some time which I wanted to spend on making the puzzle more interactive.
 

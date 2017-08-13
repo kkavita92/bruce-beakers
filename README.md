@@ -28,7 +28,7 @@ Due to time constraints, I only had 1.5 days to complete the application. As suc
 
 Before beginning, I sketched out the JavaScript objects the programme would likely require and how they were going to interact with each other:
 
-[insert diagram]
+![Planning Sketch](public/images/planning.JPG)
 
 I wanted the ```Beaker``` object to only contain the properties of the beaker such as maximum and current capacity while it was decided that the ```Puzzle``` object would control the actual game methods such as ```fillup```, ```empty``` and ```pour```.
 

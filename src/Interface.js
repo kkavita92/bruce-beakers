@@ -17,11 +17,11 @@ function updateThreeLitreBeaker() {
   updateFiveLitreBeakerCapacity();
 
   function updateThreeLitreBeakerCapacity() {
-    $('#threelitrebeaker').text(threeLitreBeaker.currentCapacity);
+    $('#threelitrebeaker').text(`${threeLitreBeaker.currentCapacity}/3`);
   }
 
   function updateFiveLitreBeakerCapacity() {
-    $('#fivelitrebeaker').text(fiveLitreBeaker.currentCapacity);
+    $('#fivelitrebeaker').text(`${fiveLitreBeaker.currentCapacity}/5`);
   }
 
   function checkGame() {

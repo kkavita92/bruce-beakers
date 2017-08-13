@@ -7,6 +7,11 @@
   font-size: 60px;
 }
 
+#buttons {
+  position: relative;
+  top: 50px;
+}
+
 .volume {
   font-family: 'Bangers', cursive;
   font-size: 30px;
@@ -49,4 +54,18 @@
     background-color: skyblue;
     position: absolute;
     bottom: 0;
+}
+
+.button {
+    background-color: black;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 4px 2px;
+    cursor: pointer;
 }

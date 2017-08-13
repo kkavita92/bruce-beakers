@@ -20,4 +20,17 @@ describe("Beaker", function() {
     });
   });
 
+  describe("#isFull", function() {
+    it("returns true if beaker is full", function() {
+      beaker.currentCapacity = 3;
+      expect(beaker.isFull()).toBe(true);
+    });
+  });
+
+  describe("#isEmpty", function() {
+    it("returns true if beaker is empty", function() {
+      expect(beaker.isEmpty()).toBe(true);
+    });
+  });
+
 });

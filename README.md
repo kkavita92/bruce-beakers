@@ -1,5 +1,7 @@
 # Bruce's Beakers
 
+![screenshot](public/images/screenshot_one.png)
+
 ## How To Play
 ```
 1. Clone repo

@@ -54,6 +54,7 @@ describe("Puzzle", function() {
       puzzle.fillup(threeLitreBeaker);
       puzzle.fillup(fiveLitreBeaker);
     });
+
     it("allows pouring when amount of space greater than water", function() {
       puzzle.empty(fiveLitreBeaker);
       puzzle.pour(threeLitreBeaker, fiveLitreBeaker);

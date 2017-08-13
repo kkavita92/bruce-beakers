@@ -21,11 +21,12 @@
     <div class="container">
       <div class="row">
         <div class="col-md-3"></div>
-        <div class="col-md-3">
+        <div id="five" class="col-md-3">
           <p id="fivelitrebeaker" class="text-center volume"></p>
           <div class="fivelitrebeaker">
             <div class="fivelitrewater"></div>
           </div>
+          <div id="buttons-oi">
           <button id="fillfive" class="button">
             <span class="glyphicon glyphicon-tint"></span>
             Fill Up
@@ -33,7 +34,8 @@
           <button id="emptyfive" class="button">Empty</button><br>
           <button id="pourfromfive" class="button">Pour</button>
         </div>
-        <div class="col-md-3">
+        </div>
+        <div id="three" class="col-md-3">
           <p id="threelitrebeaker"class="text-center volume"></p>
           <div class="threelitrebeaker">
             <div class="threelitrewater"></div>
@@ -58,7 +60,9 @@
 
     <div id=winpopup class=popup>
       <div id=winpopup-content class="text-center">
-        <h3>YOU HAVE WON</h3>
+        <h2>You Win!</h2>
+        <h3>What a legend. You solved the puzzle, defused the bomb and saved
+        thousands of lives. </h3>
         <button id="restart" type="button">Try Again</button>
       </div>
     </div>

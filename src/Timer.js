@@ -17,7 +17,7 @@ function startTimer(duration) {
 }
 
 function loseGame() {
-  $('#winpopup').toggle();
+  $('#losepopup').toggle();
   $(this).addClass('open');
   $('#time').empty();
 }

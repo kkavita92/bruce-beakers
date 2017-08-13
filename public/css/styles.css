@@ -13,9 +13,22 @@
   color: red;
 }
 
+#three {
+text-align: center;
+}
+
+#five {
+text-align: center;
+}
+
+#buttons-oi {
+  display: inline-block;
+}
+
 #buttons {
   position: relative;
   top: 50px;
+  display: inline-block;
 }
 
 .volume {
@@ -67,6 +80,7 @@
     border: none;
     border-radius: 10px;
     color: white;
+    font-family: 'Righteous', cursive;
     padding: 10px 25px;
     text-align: center;
     text-decoration: none;

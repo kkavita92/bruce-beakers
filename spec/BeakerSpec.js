@@ -8,11 +8,13 @@ describe("Beaker", function() {
     beaker = new Beaker(3);
   });
 
-  it("returns maximum capacity of beaker", function() {
-    expect(beaker.maximumCapacity).toEqual(3);
+  describe("#maximumCapacity", function() {
+    it("returns maximum capacity of beaker", function() {
+      expect(beaker.maximumCapacity).toEqual(3);
+    });
   });
 
-  describe("current capacity of beaker", function() {
+  describe("#currentCapacity", function() {
     it("initialises as zero", function() {
       expect(beaker.currentCapacity).toEqual(0);
     });

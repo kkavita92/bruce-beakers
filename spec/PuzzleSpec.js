@@ -79,4 +79,16 @@ describe("Puzzle", function() {
     });
   });
 
+  describe("#gameOver", function() {
+    it("returns true when puzzle is solved", function() {
+      puzzle.fillup(fiveLitreBeaker);
+      puzzle.pour(fiveLitreBeaker, threeLitreBeaker);
+      puzzle.empty(threeLitreBeaker);
+      puzzle.pour(fiveLitreBeaker, threeLitreBeaker);
+      puzzle.fillup(fiveLitreBeaker);
+      puzzle.pour(fiveLitreBeaker, threeLitreBeaker);
+      expect(puzzle.gameOver()).toBe(true);
+    });
+  });
+
 });

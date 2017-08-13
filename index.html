@@ -13,84 +13,82 @@
   <head>
 
   <body>
-  <div id="myNav" class="overlay">
-  </div>
-    <h1 id="header" class="text-center">Bruce's Beakers
-      <a href=#><span id="more-info" class="glyphicon glyphicon-info-sign"></span></a>
-    </h1>
-    <div id="timer" class="text-center"><span id="time">05:00</span></div>
-    <br>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-3"></div>
-        <div class="col-md-3 beaker-container">
-          <p id="fivelitrebeaker" class="text-center volume"></p>
-          <div class="fivelitrebeaker">
-            <div class="fivelitrewater"></div>
+  <div class="overlay">
+    </div>
+      <h1 id="header" class="text-center">Bruce's Beakers
+        <a href=#><span id="more-info" class="glyphicon glyphicon-info-sign"></span></a>
+      </h1>
+      <div id="timer" class="text-center"><span id="time">05:00</span></div><br>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3"></div>
+          <div class="col-md-3 beaker-container">
+            <p id="fivelitrebeaker" class="text-center volume"></p>
+            <div class="fivelitrebeaker">
+              <div class="fivelitrewater"></div>
+            </div>
+            <div id="buttons-five">
+              <button id="fillfive" class="button">
+                <span class="glyphicon glyphicon-tint"></span> Fill Up
+              </button>
+              <button id="emptyfive" class="button">
+                <span class="glyphicon glyphicon-trash"></span> Empty
+              </button><br>
+              <button id="pourfromfive" class="button">
+                <span class="glyphicon glyphicon-arrow-right"></span> Pour
+              </button>
+            </div>
           </div>
-          <div id="buttons-five">
-            <button id="fillfive" class="button">
-              <span class="glyphicon glyphicon-tint"></span> Fill Up
-            </button>
-            <button id="emptyfive" class="button">
-              <span class="glyphicon glyphicon-trash"></span> Empty
-            </button><br>
-            <button id="pourfromfive" class="button">
-              <span class="glyphicon glyphicon-arrow-right"></span> Pour
-            </button>
+          <div class="col-md-3 beaker-container">
+            <p id="threelitrebeaker"class="text-center volume"></p>
+            <div class="threelitrebeaker">
+              <div class="threelitrewater"></div>
+            </div>
+            <div id="buttons-three">
+              <button id="fillthree" class="button">
+                <span class="glyphicon glyphicon-tint"></span> Fill Up
+              </button>
+              <button id="emptythree" class="button">
+                <span class="glyphicon glyphicon-trash"></span> Empty
+              </button><br>
+              <button id="pourfromthree" class="button">
+                <span class="glyphicon glyphicon-arrow-left"></span> Pour
+              </button>
+            </div>
           </div>
+          <div class="col-md-3"></div>
         </div>
-        <div class="col-md-3 beaker-container">
-          <p id="threelitrebeaker"class="text-center volume"></p>
-          <div class="threelitrebeaker">
-            <div class="threelitrewater"></div>
-          </div>
-          <div id="buttons-three">
-            <button id="fillthree" class="button">
-              <span class="glyphicon glyphicon-tint"></span> Fill Up
-            </button>
-            <button id="emptythree" class="button">
-              <span class="glyphicon glyphicon-trash"></span> Empty
-            </button><br>
-            <button id="pourfromthree" class="button">
-              <span class="glyphicon glyphicon-arrow-left"></span> Pour
-            </button>
-          </div>
+      </div>
+
+      <div id=infopopup class=popup>
+        <div class="text-center popup-content">
+          <h2>How To Play</h2>
+          <h3>Imagine you are Bruce Willis in Die Hard 3.</h3><p>
+          <h3>There is a ticking bomb and the only way to defuse it
+            is by placing exactly 4 litres of water on a sensor.
+            However, you only have a tap with running water,
+            a 3 litre beaker and a 5 litre beaker on hand.</h3></p>
+          <h3>There is only 5 minutes before the bomb goes off. Use the buttons
+            to fill, empty or transfer water between the beakers.</h3></p>
+          <h3>You win the game when the larger beaker only has 4 litres within it</h3><br>
+          <button id="close" class="button">Close</button>
         </div>
-        <div class="col-md-3"></div>
       </div>
-    </div>
-    <p id="game"><p>
 
-    <div id=infopopup class=popup>
-      <div id=infopopup-content class="text-center popup-content">
-        <h2>How To Play</h2>
-        <h3>Imagine you are Bruce Willis in Die Hard 3.</h3><p>
-        <h3>There is a ticking bomb and the only way to defuse it
-          is by placing exactly 4 litres of water on a sensor.
-          However, you only have a tap with running water,
-          a 3 litre beaker and a 5 litre beaker on hand.</h3></p>
-        <h3>There is only 5 minutes before the bomb goes off. Use the buttons
-          to fill, empty or transfer water between the beakers.</h3></p>
-        <h3>You win the game when the larger beaker only has 4 litres within it</h3>
-        <br><button id="close" class="button">Close</button>
+      <div id=winpopup class=popup>
+        <div class="text-center popup-content">
+          <h2>You Win!</h2>
+          <h3>What a legend. You solved the puzzle, defused the bomb and saved
+          thousands of lives. </h3><br>
+          <button class="button restart">Try Again</button>
+        </div>
       </div>
-    </div>
 
-    <div id=winpopup class=popup>
-      <div id=winpopup-content class="text-center popup-content">
-        <h2>You Win!</h2>
-        <h3>What a legend. You solved the puzzle, defused the bomb and saved
-        thousands of lives. </h3>
-        <br><button class="button restart">Try Again</button>
-      </div>
-    </div>
-
-    <div id=losepopup class=popup>
-      <div id=losepopup-content class="text-center popup-content">
-        <h2>Game Over</h2>
-        <h3>You weren't able to complete the task. The bomb has exploded.</h3>
-        <br><button class="button restart">Try Again</button>
+      <div id=losepopup class=popup>
+        <div class="text-center popup-content">
+          <h2>Game Over</h2>
+          <h3>You weren't able to complete the task. The bomb has exploded.</h3><br>
+          <button class="button restart">Try Again</button>
       </div>
     </div>
   <body>

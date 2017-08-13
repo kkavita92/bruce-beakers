@@ -23,22 +23,25 @@
 
 Due to time constraints, I only had 1.5 days to complete the application. As such, before starting, I had to pick my priorities and what I wanted to focus on. Ultimately, I decided my focus would be on the following key issues:
 
-1. Writing logic for application in clean code
-2. Making application as interactive as possible
+1. **Writing logic for application in clean code**
+2. **Making application as interactive as possible**
 
 Before beginning, I sketched out the JavaScript objects the programme would likely require and how they were going to interact with each other:
 
 [insert diagram]
 
-I wanted the Beaker object to only contain the properties of the beaker such as maximum and current capacity while it was decided that the Puzzle object would control the actual game methods such as ```fillup```, ```empty``` and ```pour```.
+I wanted the ```Beaker``` object to only contain the properties of the beaker such as maximum and current capacity while it was decided that the ```Puzzle``` object would control the actual game methods such as ```fillup```, ```empty``` and ```pour```.
 
 I also followed a TDD-approach in completing the backend (shown below), using unit tests to guide what I wanted each object to do. If you'd like to run my tests directly, open ```SpecRunner.html``` in your browser.
 
 ![Passing Tests!](public/images/unit_tests.png)
 
+Additionally, I have implemented defensive programming such that errors are thrown if implausible scenarios are attempted - trying to empty an empty beaker or fill up an already full beaker. Potentially, these errors (currently only displayed on console) could be shown as alerts to the user.
+
 I spent considerable time on the frontend, mainly as I wanted the application to be highly interactive. In particular, I wanted an animated glass which would have its content changing according to its current volume as I thought it would enable the user to visualise what they were doing more clearly. A countdown timer and pop-ups which would automatically stop the game when the player had solved the puzzle or when time had run out were also other features I was keen on. I was able to achieve these with a combination of JQuery and CSS.
 
 Regretfully, I ran out of time to include feature tests for the front end so I had to ensure everything was functioning by running the application several times. This would be a key thing to add given more time.
+
 
 ## Reflections
 
@@ -53,5 +56,6 @@ However, overall, the project was an important lesson in defining what I wanted 
 ## What Next?
 * Deploy to server with Node.js.
 * Add feature tests with Zombie/Phantom.
+* Flashing errors on webpage.
 * Save high scores (timings) to database so player can assess their timings against other players.
 * Sound effects!

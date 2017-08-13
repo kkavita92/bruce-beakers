@@ -8,14 +8,14 @@ $(document).ready(function() {
   startTimer(300);
 
   $('#more-info').on('click', function() {
-    $('#infopopup').toggle();
     createOverlay();
+    $('#infopopup').toggle();
     $(this).addClass('open');
   });
 
   $('#close').on('click', function() {
-    $('#infopopup').toggle();
     removeOverlay();
+    $('#infopopup').toggle();
     $(this).removeClass('open');
   });
 
@@ -108,8 +108,8 @@ $(document).ready(function() {
   }
 
   function endgame() {
-    $("#timer").empty();
     createOverlay();
+    $("#timer").empty();
     $('#winpopup').toggle();
     $(this).addClass('open');
   }

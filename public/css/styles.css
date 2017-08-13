@@ -75,3 +75,28 @@
     margin: 4px 2px;
     cursor: pointer;
 }
+
+.popup {
+  display: none;
+  position: absolute;
+  top: 25vh;
+  left: 12vw;
+  bottom: 10vh;
+  width: 75vw;
+  height: 70vh;
+  background-color: yellow;
+  color: black;
+  border-style: solid;
+  border-width: 6px;
+  border-radius: 5px;
+  border-color: black;
+  z-index: 3;
+}
+
+#infopopup.open {
+  display: block;
+}
+
+#infopopup-content {
+  font-family: 'Righteous', cursive;
+}

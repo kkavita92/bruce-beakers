@@ -1,20 +1,20 @@
 $(document).ready(function() {
 
-function updateFiveLitreBeaker() {
-  var percentageFilled = fiveLitreBeaker.currentCapacity * 20;
-  $('.fivelitrewater').animate({height: percentageFilled + '%'}, 1000)
-}
-
-function updateThreeLitreBeaker() {
-  var percentageFilled = threeLitreBeaker.currentCapacity * 33.33;
-  $('.threelitrewater').animate({height: percentageFilled + '%'}, 1000)
-}
-
   var puzzle = new Puzzle();
   var fiveLitreBeaker = puzzle.fiveLitreBeaker;
   var threeLitreBeaker = puzzle.threeLitreBeaker;
   updateThreeLitreBeakerCapacity();
   updateFiveLitreBeakerCapacity();
+
+  function updateFiveLitreBeaker() {
+    var percentageFilled = fiveLitreBeaker.currentCapacity * 20;
+    $('.fivelitrewater').animate({height: percentageFilled + '%'}, 1000)
+  }
+
+  function updateThreeLitreBeaker() {
+    var percentageFilled = threeLitreBeaker.currentCapacity * 33.33;
+    $('.threelitrewater').animate({height: percentageFilled + '%'}, 1000)
+  }
 
   function updateThreeLitreBeakerCapacity() {
     $('#threelitrebeaker').text(`${threeLitreBeaker.currentCapacity}/3`);
@@ -31,8 +31,24 @@ function updateThreeLitreBeaker() {
   }
 
   function endgame() {
-    $('#game').text("GAME OVER LOSER");
+    $("#timer").empty();
+    $('#winpopup').toggle();
+    $(this).addClass('open');
   }
+
+  $('#more-info').on('click', function() {
+    $('#infopopup').toggle();
+    $(this).addClass('open');
+  });
+
+  $('#close').on('click', function() {
+    $('#infopopup').toggle();
+    $(this).removeClass('open');
+  });
+
+  $('#restart').on('click', function() {
+    location.reload();
+  });
 
   $('#fillfive').click(function() {
     puzzle.fillup(fiveLitreBeaker);
